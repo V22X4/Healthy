@@ -59,3 +59,10 @@ To run Healthy locally, follow these steps:
    ```
 
 The backend server will start running and will be accessible at `http://localhost:5000`.
+
+## Previews
+
+![Screenshot 2024-03-30 164835](https://github.com/V22X4/healthy/assets/96458962/c4700648-dcca-419e-a954-3f093dbfc24e)
+
+![image](https://github.com/V22X4/healthy/assets/96458962/bd848f3c-9b27-4b78-879d-eb5f3329b890)
+
