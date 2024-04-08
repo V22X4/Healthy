@@ -15,6 +15,9 @@ code {
 :root {
   --col1: #c7dbff;
   --col2: #d4e4ff;
+  --chat-hover : rgb(38, 116, 128);
+  --chat-highlighted : #1f9389;
+  --share-button : #a5d9a1;
   --textcol: rgb(2, 2, 2);
 }
 
@@ -28,3 +31,5 @@ code {
   margin: 0;
   padding: 0;
 }
+
+

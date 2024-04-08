@@ -5,14 +5,16 @@ import nouserlogo from "../../assets/nouserlogo.png";
 import styles from "./LeftSection.module.css";
 import { fetchSectionNames, updateSection } from "../../actions/messageActions.js";
 import { ClimbingBoxLoader } from "react-spinners";
+import {toDarkMode, toLightMode} from "../../utils/darkmode.js";
 
 const LeftSection = () => {
   const [sectionNames, setSectionNames] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
   const dispatch = useDispatch();
   const currentSection = useSelector(state => state.message.sectionName);
 
   useEffect(() => {
-    // Call the fetchSectionNames function when the component mounts
+
      const temp = async() => {
        const data = await fetchSectionNames(); 
       //  console.log(data)
@@ -22,6 +24,16 @@ const LeftSection = () => {
     temp();
       
   }, []);
+
+  const toggleDarkMode = () => {
+    if (darkMode) {
+      setDarkMode(false);
+      toLightMode();
+    } else {  
+      setDarkMode(true);
+      toDarkMode();
+    } 
+  };
 
   const handleSectionClick = (sectionName) => {
     dispatch(updateSection(sectionName));
@@ -59,6 +71,11 @@ const LeftSection = () => {
         </div>
         ))}
       </div>
+      <button className={styles.darkModeButton} onClick={toggleDarkMode}>
+        Switch to 
+        {darkMode ? " Light Mode ☀️" : " Dark Mode 🌙"}
+      </button>
+
       <div className={styles.newChat}>
         <div>
           <img src={nouserlogo} alt="ChatGPT" width={50} height={50} />

@@ -166,7 +166,7 @@ const sendMessage = async (message, sectionName, dispatch) => {
             // console.log(allMessages_, "allMessages_")
         modelres = await Gemini(allMessages_, message, sectionName);
         res_chat.push(
-            { message: modelres, role: "model" }
+            { text: modelres, role: "model" }
         );
         await addMessageToSection(sectionName, modelres, "model");
         }),

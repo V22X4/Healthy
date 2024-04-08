@@ -195,14 +195,18 @@
 
 .msg {
     text-align:justify;
+    color: var(--mdtextcol);
+    /* color: var(--textcol); */
+
 }
 
 .contactButton {
     margin-left: 2%;
-    background: #1f9389;
+    background: var(--chat-highlighted);
     padding: 0.8%;
     border: none;
     border-radius: 10px;
+    color : var(--textcol);
 }
 
 .shareddocpfp {
@@ -220,8 +224,9 @@
   
 .shareButton {
     margin-left: 2%;
-    background: #a5d9a1;
+    background: var(--share-button);
     padding: 0.8%;
     border: none;
     border-radius: 10px;
+    color : var(--textcol);
 }

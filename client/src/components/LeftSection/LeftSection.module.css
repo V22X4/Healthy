@@ -45,10 +45,20 @@
 }
 
 .chat:hover .text1 {
-    color: rgb(38, 116, 128);
+    /* color: rgb(38, 116, 128); */
+    color: var(--chat-hover);
 }
 
 .highlighted {
-    color:#1f9389;
+    /* color:#1f9389; */
+    color: var(--chat-highlighted);
+}
+
+.darkModeButton {
+    color: var(--textcol);
+    background: var(--col1);
+    border: none;
+    text-align: start;
+    margin-left: 12%;
 }
   
